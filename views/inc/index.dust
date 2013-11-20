@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html class="no-js">
+	<head>
+		<title>Manage your expenses - bahikhata</title>
+		<link rel="stylesheet" type="text/css" href="stylesheets/jquery-ui.css">
+		<link rel="stylesheet" type="text/css" href="stylesheets/bootstrap.min.css">
+		<link rel="stylesheet" type="text/css" href="stylesheets/bootstrap-responsive.min.css">
+		<link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+		<link rel="stylesheet" type="text/css" href="stylesheets/style.css">
+		<script type="text/javascript" src="js/modernizr-v2.6.2.js"></script>
+	</head>
+	<body>
+		<section id="wrapper">
+			<header>
+				<div class="container">
+					<h1 class="logo">
+						<a href="/"><img src="img/logo2.png" alt="bahikhata" title="bahikhata"></a>
+					</h1>
+					{@if cond="{data.hideHeader}"}
+						<nav role="navigation">
+							<ul class="nav nav-tabs">
+							  <li class="active">
+							    <a href="#">Home</a>
+							  </li>
+							  <li><a href="#">Profile</a></li>
+							  <li><a href="#">Contact</a></li>
+							</ul>
+						</nav>
+					{/if}
+
+					<ul class="is-returning-user">
+						{@if cond="!{data.isBeta}"}
+							{^data.loggedIn}<li><a href="/signup">Sign up</a></li>{/data.loggedIn}
+						{/if}
+						{?data.isLoggedIn}<li class="welcome-text">Hello {data.user},&nbsp;<a href="/logout"> (logout)</a></li>{/data.isLoggedIn}
+					</ul>
+
+				</div>
+			</header>
+			<section id="main" class="container">
+				{data.sessionTimeout}
+				{?data.sessionTimeout}
+					<div class="alert">
+					  <button type="button" class="close" data-dismiss="alert">&times;</button>
+					  <strong>Warning!</strong> {data.sessionTimeout}
+					</div>
+				{/data.sessionTimeout}
+				{+maincontent /}
+			</section>
+		</section>
+		{> "inc/footer" /}
+		<script data-main="js/main" src="js/require.js"></script>
+	</body>
+</html>
+

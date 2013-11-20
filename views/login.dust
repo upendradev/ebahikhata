@@ -1,0 +1,37 @@
+{>"inc/index" /}
+{< maincontent}
+	<div class="row-fluid">
+		<div class="span4">
+		 	<form action="/flow" method="post">
+				<fieldset>
+					<legend>
+						<h2>Login here</h2>
+					</legend>
+					<label for="username">Enter your user name or email id</label>
+					<p class="error"></p>
+					<input name=username type="text" id="username" placeholder="User name or email id"> 
+
+					<label for="password">Enter your password</label>
+					<p class="error"></p>
+					<input name=password type="password" id="password" placeholder="Password" />
+				
+					<div class="buttons">
+						<input type="submit" name="loginButton" value="Login" id="login" class="btn btn-primary" />
+						{@if cond="!{data.isBeta}"}
+							<span> -- OR -- </span>
+							<a href="signup"> Signup</a>
+						{/if}
+					</div>
+				</fieldset>	
+			</form>
+		</div>
+		<div class="span8">
+	  		<article>
+	  			<div class="banner">
+	  				<h4>Tracking your daily expenses is a good habit. But managing it in an excelsheet is time consuming. Now forget about excelsheet, switch to bahikhata.</h4>
+	  				<a href="/signup" {@if cond="{data.isBeta}"} class="action-disabled"{/if}>Sign up now</a>
+	  			</div>
+	  		</article>
+  		</div>
+	</div>
+{/maincontent}

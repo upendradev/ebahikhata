@@ -1,0 +1,18 @@
+<table class="table">
+	<thead>
+		<th>Date</th>
+		<th>Details</th>
+		<th>Amount</th>
+		<th>Source</th>
+	</thead>
+	<tbody>
+		{#data.tranasctions}
+			<tr>
+				<td>{date}</td>
+				<td>{details}</td>
+				<td>{amount}</td>
+				<td>{source}</td>
+			</tr>
+		{/data.tranasctions}
+	</tbody>
+</table>

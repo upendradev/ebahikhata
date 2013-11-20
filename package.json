@@ -1,0 +1,40 @@
+{
+  "name": "ebahikhata",
+  "version": "1.0.0",
+  "description": "Manage daily expenses",
+  "keywords": [
+    "ebahikhata",
+    "upendra",
+    "application",
+    "homefinance"
+  ],
+  "author": {
+    "name": "Upendra Dev Singh",
+    "email": "upendradevsingh@outlook.com",
+    "url":  "http://www.usingh.in/"
+  },
+  "homepage": "http://www.ebahikhata.in/",
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+
+  "engines": {
+    "node": ">= 0.6.0",
+    "npm": ">= 1.0.0"
+  },
+  "dependencies": {
+    "express": "3.x",
+    "dustjs-linkedin": "*",
+    "dustjs-helpers": "*",
+    "consolidate": "*",
+    "less-middleware": "*",
+    "nodemon": "*",
+    "mongodb": "1.3.x"
+  },
+  "devDependencies": {},
+  "bundleDependencies": [],
+
+  "private": true,
+  "main": "app.js"
+}

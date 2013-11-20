@@ -1,0 +1,18 @@
+{>"inc/index" /}
+{< maincontent}
+	<nav class="secondary-nav clearfix">
+	  <ul>
+	  	<li class="active"><a href="#tab1" data-toggle="tab">Overview</a></li>
+    	<li><a href="" data-toggle="tab">History</a></li>
+    	<li><a href="#tab3" data-toggle="tab">Add funds</a></li>
+    	<li><a href="#tab4" data-toggle="tab">Do more</a></li>
+	  </ul>
+	  <p class="balance">Your available balance - Rs. {data.balance} </p>
+	</nav>
+   	<div class="content">
+		{> "inc/transaction" /}
+	<!--   {! <p><a href="#tab2">Test router</a></p> !} -->
+		
+	</div>
+	
+{/maincontent}

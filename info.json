@@ -1,0 +1,7 @@
+MongoDB 2.2 database added.  Please make note of these credentials:
+
+   Root User:     admin
+   Root Password: A8RxM3hqLX4m
+   Database Name: ebahikhata
+
+Connection URL: mongodb://$OPENSHIFT_MONGODB_DB_HOST:$OPENSHIFT_MONGODB_DB_PORT/
